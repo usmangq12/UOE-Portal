@@ -7,32 +7,39 @@
         <item
             android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_dashboard"
-            android:title="Dashboard" />
+            android:title="@string/dashboard" />
         <item
             android:id="@+id/nav_events"
             android:icon="@drawable/ic_event"
-            android:title="Events" />
+            android:title="@string/event" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/about" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/communicate">
         <menu>
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_about"
-                android:title="About Us" />
             <item
                 android:id="@+id/nav_contact_us"
                 android:icon="@drawable/ic_phone"
-                android:title="Contact Us" />
+                android:title="@string/contact" />
             <item
                 android:id="@+id/nav_our_website"
                 android:icon="@drawable/ic_website"
-                android:title="Our Website" />
+                android:title="@string/web" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/logout">
+        <menu>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_logout"
-                android:title="Logout" />
+                android:icon="@drawable/logout"
+                android:title="@string/logout" />
         </menu>
+
     </item>
 
 </menu>

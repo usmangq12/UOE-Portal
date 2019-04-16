@@ -9,5 +9,18 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notifications">Notification here</string>
     <string name="time">16 Feb 2019</string>
+    <string name="time_table">Time Table</string>
     <string name="admissions">Admissions are currently closed.</string>
+    <string name="sports">Sports week is starting from 16 Feb</string>
+    <string name="uploadedTime">Uploaded time here</string>
+    <string name="dashboard">Home Page</string>
+    <string name="event">Events</string>
+    <string name="courses">Courses</string>
+    <string name="cgp">CGPA Calculator</string>
+    <string name="communicate">Communicate</string>
+    <string name="about">About Us</string>
+    <string name="contact">Contact Us</string>
+    <string name="web">Our Website</string>
+    <string name="apply">Apply Online</string>
+    <string name="logout">Logout</string>
 </resources>
