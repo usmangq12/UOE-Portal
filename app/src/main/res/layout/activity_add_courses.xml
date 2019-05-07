@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCourses">
+
+    <TextView
+        android:id="@+id/tvAddCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="Add Course"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Course Title"
+        app:layout_constraintEnd_toEndOf="@+id/tvAddCourses"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/tvAddCourses"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddCourses" />
+
+    <EditText
+        android:id="@+id/etFirstCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="First Course"
+        app:layout_constraintEnd_toEndOf="@+id/etCourseTitle"
+        app:layout_constraintStart_toStartOf="@+id/etCourseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/etCourseTitle" />
+
+    <EditText
+        android:id="@+id/etSecondCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="2nd Course"
+        app:layout_constraintEnd_toEndOf="@+id/etFirstCourse"
+        app:layout_constraintStart_toStartOf="@+id/etFirstCourse"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstCourse" />
+
+    <EditText
+        android:id="@+id/etThirdCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="3rd Course"
+        app:layout_constraintEnd_toEndOf="@+id/etSecondCourse"
+        app:layout_constraintStart_toStartOf="@+id/etSecondCourse"
+        app:layout_constraintTop_toBottomOf="@+id/etSecondCourse" />
+
+    <EditText
+        android:id="@+id/etFourthCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="4th Course"
+        app:layout_constraintEnd_toEndOf="@+id/etThirdCourse"
+        app:layout_constraintStart_toStartOf="@+id/etThirdCourse"
+        app:layout_constraintTop_toBottomOf="@+id/etThirdCourse" />
+
+    <EditText
+        android:id="@+id/etFifthCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="5th Course"
+        app:layout_constraintEnd_toEndOf="@+id/etFourthCourse"
+        app:layout_constraintStart_toStartOf="@+id/etFourthCourse"
+        app:layout_constraintTop_toBottomOf="@+id/etFourthCourse" />
+
+    <EditText
+        android:id="@+id/etSixthCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="6th Course"
+        app:layout_constraintEnd_toEndOf="@+id/etFifthCourse"
+        app:layout_constraintStart_toStartOf="@+id/etFifthCourse"
+        app:layout_constraintTop_toBottomOf="@+id/etFifthCourse" />
+
+
+</android.support.constraint.ConstraintLayout>

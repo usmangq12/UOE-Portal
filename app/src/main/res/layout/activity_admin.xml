@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin">
+
+    <TextView
+        android:id="@+id/tvAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:text="Admin"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddStudent"
+        app:layout_constraintStart_toStartOf="@+id/btnAddStudent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddStudent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="49dp"
+        android:text="Add Student"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddNotification"
+        app:layout_constraintStart_toStartOf="@+id/btnAddNotification"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdmin" />
+
+    <Button
+        android:id="@+id/btnAddNotification"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:text="Add Notifications"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddCourses"
+        app:layout_constraintStart_toStartOf="@+id/btnAddCourses"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddStudent" />
+
+    <Button
+        android:id="@+id/btnAddCourses"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Add Courses"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddTimeTable"
+        app:layout_constraintStart_toStartOf="@+id/btnAddTimeTable"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNotification" />
+
+    <Button
+        android:id="@+id/btnAddTimeTable"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="Add Time Table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddCourses" />
+
+</android.support.constraint.ConstraintLayout>
