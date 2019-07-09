@@ -11,9 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".StudentLogin"></activity>
+        <activity android:name=".Register" />
         <activity
-            android:name=".BaseActivity"
+            android:name=".AddNotifications"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,9 +28,9 @@
         <activity android:name=".Notification" />
         <activity android:name=".Time_Table_Activity" />
         <activity android:name=".GPA_Calculator" />
-        <activity android:name=".AddNotifications"/>
-        <activity android:name=".AddTimeTable" />
         <activity android:name=".AddCourses" />
+        <activity android:name=".AddTimeTable" />
+        <activity android:name=".BaseActivity" />
         <activity android:name=".AddStudent" />
         <activity android:name=".Admin" />
     </application>

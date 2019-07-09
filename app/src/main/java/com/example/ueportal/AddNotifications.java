@@ -17,7 +17,7 @@ public class AddNotifications extends AppCompatActivity {
     }
 
     private void viewAll() {
-        etNotificationTitle = findViewById(R.id.etNotificationTitle);
-        etDetail = findViewById(R.id.etDetail);
+//        etNotificationTitle = findViewById(R.id.etNotificationTitle);
+//        etDetail = findViewById(R.id.etDetail);
     }
 }

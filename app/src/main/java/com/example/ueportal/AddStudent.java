@@ -18,13 +18,13 @@ public class AddStudent extends AppCompatActivity {
     }
 
     private void allViews(){
-        tvAddStudent = findViewById(R.id.tvAddStudent);
-
-        etFirstName = findViewById(R.id.etFirstName);
-        etLastName = findViewById(R.id.etLastName);
-        etRollNumber = findViewById(R.id.etRollNumber);
-        etEmailAddress = findViewById(R.id.etEmailAddress);
-        etAddress = findViewById(R.id.etAddress);
+//        tvAddStudent = findViewById(R.id.tvAddStudent);
+//
+//        etFirstName = findViewById(R.id.etFirstName);
+//        etLastName = findViewById(R.id.etLastName);
+//        etRollNumber = findViewById(R.id.etRollNumber);
+//        etEmailAddress = findViewById(R.id.etEmailAddress);
+//        etAddress = findViewById(R.id.etAddress);
     }
 
 

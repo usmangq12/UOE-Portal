@@ -2,8 +2,7 @@ package com.example.ueportal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,33 +13,55 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     CardView notificationsCV, applyOnlineCV, coursesCV, GPA_CalculatorCV, timeTableCV;
 
+    //TextView blink_text;
+
+    DrawerLayout drawer;
+    ViewFlipper img_viewFlipper;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        //Array for Image ViewFlipper
+        int[] images = {R.drawable.university1, R.drawable.university2, R.drawable.university3, R.drawable.university4};
+
+        // for text blink code
+        //blink();
+
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        applyOnlineCV = findViewById(R.id.cardView11);
-        coursesCV = findViewById(R.id.cardView10);
-        notificationsCV = findViewById(R.id.cardView6);
-        timeTableCV = findViewById(R.id.cardView12);
-        GPA_CalculatorCV = findViewById(R.id.cardView13);
+     applyOnlineCV = findViewById(R.id.apply_img_id);
+       //coursesCV = findViewById(R.id.cardView10);
+     notificationsCV = findViewById(R.id.notification_img_id);
+     timeTableCV = findViewById(R.id.time_img_id);
+     GPA_CalculatorCV = findViewById(R.id.calculator_img_id);
+     img_viewFlipper= findViewById(R.id.img_viewFlipper);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+     //foreach for viewFlipper
+     for(int image : images){
+         image_viewFlipper(image);
+        }
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        //drawer
+        drawerLayout();
 
+        //onClick Listeners
+        method_onClicks();
+
+
+    }
+
+    private void method_onClicks() {
         applyOnlineCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +103,58 @@ public class BaseActivity extends AppCompatActivity
         });
     }
 
+    //method for drawer layout
+    private void drawerLayout() {
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    //method for image view flipper
+    public void image_viewFlipper(int image){
+        ImageView imageView = new ImageView(BaseActivity.this);
+        imageView.setBackgroundResource(image);
+
+        img_viewFlipper.addView(imageView);
+        img_viewFlipper.setFlipInterval(1000);
+        img_viewFlipper.setAutoStart(true);
+
+        //Animation for viewFlipper
+        img_viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
+        img_viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
+
+    }
+    //private void blink(){
+    //    final Handler handler = new Handler();
+    //    new Thread(new Runnable() {
+    //        @Override
+    //        public void run() {
+    //            int timetoblink = 1000;
+    //            try{Thread.sleep(timetoblink);}
+    //            catch (Exception e){}
+    //            handler.post(new Runnable() {
+    //                @Override
+    //                public void run() {
+    //                    blink_text = findViewById(R.id.blink_text);
+    //                    if (blink_text.getVisibility() == View.VISIBLE){
+    //                        blink_text.setVisibility(View.INVISIBLE);
+    //                    }
+    //                    else {
+    //                        blink_text.setVisibility(View.VISIBLE);
+    //                    }
+    //                    blink();
+    //                }
+    //            });
+    //        }
+    //    }).start();
+    //}
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -116,7 +189,7 @@ public class BaseActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -133,8 +206,10 @@ public class BaseActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout) {
 
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
