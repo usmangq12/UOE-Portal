@@ -1,8 +1,10 @@
 package com.example.ueportal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -45,6 +47,7 @@ public class BaseActivity extends AppCompatActivity
      notificationsCV = findViewById(R.id.notification_img_id);
      timeTableCV = findViewById(R.id.time_img_id);
      GPA_CalculatorCV = findViewById(R.id.calculator_img_id);
+
      img_viewFlipper= findViewById(R.id.img_viewFlipper);
 
      //foreach for viewFlipper
@@ -163,6 +166,24 @@ public class BaseActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(BaseActivity.this);
+        builder.setMessage("Do you want to exit?");
+        builder.setCancelable(true);
+        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
     @Override
