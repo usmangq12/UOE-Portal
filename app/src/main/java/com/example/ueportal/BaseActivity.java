@@ -36,8 +36,6 @@ public class BaseActivity extends AppCompatActivity
         //Array for Image ViewFlipper
         int[] images = {R.drawable.university1, R.drawable.university2, R.drawable.university3, R.drawable.university4};
 
-        // for text blink code
-        //blink();
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -133,30 +131,6 @@ public class BaseActivity extends AppCompatActivity
         img_viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
 
     }
-    //private void blink(){
-    //    final Handler handler = new Handler();
-    //    new Thread(new Runnable() {
-    //        @Override
-    //        public void run() {
-    //            int timetoblink = 1000;
-    //            try{Thread.sleep(timetoblink);}
-    //            catch (Exception e){}
-    //            handler.post(new Runnable() {
-    //                @Override
-    //                public void run() {
-    //                    blink_text = findViewById(R.id.blink_text);
-    //                    if (blink_text.getVisibility() == View.VISIBLE){
-    //                        blink_text.setVisibility(View.INVISIBLE);
-    //                    }
-    //                    else {
-    //                        blink_text.setVisibility(View.VISIBLE);
-    //                    }
-    //                    blink();
-    //                }
-    //            });
-    //        }
-    //    }).start();
-    //}
 
     @Override
     public void onBackPressed() {
