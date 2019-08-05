@@ -4,106 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/parent_app_background"
     tools:context=".AddStudent">
 
 
-    <!--<TextView-->
-        <!--android:id="@+id/tvAddStudent"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="35dp"-->
-        <!--android:text="Add Student"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/tvAddStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Add Student"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<EditText-->
-        <!--android:id="@+id/etFirstName"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="27dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:hint="Enter First Name"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/etLastName"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/tvAddStudent" />-->
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Enter First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/etLastName"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddStudent" />
 
-    <!--<EditText-->
-        <!--android:id="@+id/etLastName"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="1dp"-->
-        <!--android:layout_marginLeft="1dp"-->
-        <!--android:layout_marginBottom="28dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:hint="Enter Last Name"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/etRollNumber"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/etRollNumber" />-->
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Enter Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etRollNumber"
+        app:layout_constraintStart_toStartOf="@+id/etRollNumber" />
 
-    <!--<EditText-->
-        <!--android:id="@+id/etRollNumber"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="232dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:hint="Enter Roll Number"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <EditText
+        android:id="@+id/etRollNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:ems="10"
+        android:hint="Enter Roll Number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<EditText-->
-        <!--android:id="@+id/etEmailAddress"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="25dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:hint="Enter Email Address"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/etRollNumber"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/etRollNumber" />-->
+    <EditText
+        android:id="@+id/etEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Enter Email Address"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/etRollNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etRollNumber" />
 
-    <!--<EditText-->
-        <!--android:id="@+id/etAddress"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="33dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:hint="Enter Address"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/etEmailAddress"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/etEmailAddress" />-->
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="Enter Address"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/etEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailAddress" />
 
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/faculty_cal_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.v7.widget.AppCompatImageView
-            android:layout_width="62dp"
-            android:layout_height="61dp"
-            android:layout_marginBottom="18dp"
-            android:background="@drawable/faculty_background"
-            android:src="@drawable/faculty"
-            app:layout_constraintBottom_toBottomOf="@+id/faculty_text_id"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.142" />
+        <!--<android.support.v7.widget.AppCompatImageView-->
+        <!--android:layout_width="62dp"-->
+        <!--android:layout_height="61dp"-->
+        <!--android:layout_marginBottom="18dp"-->
+        <!--android:background="@drawable/faculty_background"-->
+        <!--android:src="@drawable/faculty"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/faculty_text_id"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.142" />-->
 
-        <TextView
-            android:id="@+id/faculty_text_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="@string/faculty"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <!--<TextView-->
+        <!--android:id="@+id/faculty_text_id"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="64dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:text="@string/faculty"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
 
 
     </android.support.constraint.ConstraintLayout>

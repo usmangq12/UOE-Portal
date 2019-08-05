@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/parent_app_background"
     tools:context=".Admin">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="74dp"
         android:text="Admin"
+        android:gravity="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/btnAddStudent"
         app:layout_constraintStart_toStartOf="@+id/btnAddStudent"

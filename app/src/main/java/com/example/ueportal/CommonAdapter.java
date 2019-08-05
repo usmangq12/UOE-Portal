@@ -20,7 +20,7 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.Programmin
     @Override
     public ProgrammingViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View view = inflater.inflate(R.layout.list_item_layout, viewGroup, false);
+        View view = inflater.inflate(R.layout.notifications_cardview, viewGroup, false);
         return new ProgrammingViewHolder(view);
     }
 

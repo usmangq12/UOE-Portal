@@ -16,13 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-public class BaseActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-    CardView notificationsCV, applyOnlineCV, coursesCV, GPA_CalculatorCV, timeTableCV;
+public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    LinearLayout linear_notificationId, linear_apply_online, linear_time_table, linear_gpa_cal, linear_courses, linear_view_faculty;
 
-    //TextView blink_text;
+    TextView blink_text;
 
     DrawerLayout drawer;
     ViewFlipper img_viewFlipper;
@@ -33,24 +34,25 @@ public class BaseActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Array for Image ViewFlipper
+//        Array for Image ViewFlipper
         int[] images = {R.drawable.university1, R.drawable.university2, R.drawable.university3, R.drawable.university4};
 
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-     applyOnlineCV = findViewById(R.id.apply_img_id);
-       //coursesCV = findViewById(R.id.cardView10);
-     notificationsCV = findViewById(R.id.notification_img_id);
-     timeTableCV = findViewById(R.id.time_img_id);
-     GPA_CalculatorCV = findViewById(R.id.calculator_img_id);
+        linear_notificationId = findViewById(R.id.linear_notificationId);
+        linear_apply_online = findViewById(R.id.linear_apply_online);
+        linear_time_table = findViewById(R.id.linear_time_table);
+        linear_courses = findViewById(R.id.linear_courses);
+        linear_gpa_cal = findViewById(R.id.linear_gpa_cal);
+        linear_view_faculty = findViewById(R.id.linear_view_faculty);
 
-     img_viewFlipper= findViewById(R.id.img_viewFlipper);
+        img_viewFlipper = findViewById(R.id.img_viewFlipper);
 
-     //foreach for viewFlipper
-     for(int image : images){
-         image_viewFlipper(image);
+//     foreach for viewFlipper
+        for (int image : images) {
+            image_viewFlipper(image);
         }
 
         //drawer
@@ -63,7 +65,7 @@ public class BaseActivity extends AppCompatActivity
     }
 
     private void method_onClicks() {
-        applyOnlineCV.setOnClickListener(new View.OnClickListener() {
+        linear_apply_online.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BaseActivity.this, ApplyOnline.class);
@@ -71,7 +73,7 @@ public class BaseActivity extends AppCompatActivity
             }
         });
 
-        coursesCV.setOnClickListener(new View.OnClickListener() {
+        linear_courses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BaseActivity.this, CoursesActivity.class);
@@ -79,7 +81,7 @@ public class BaseActivity extends AppCompatActivity
             }
         });
 
-        notificationsCV.setOnClickListener(new View.OnClickListener() {
+        linear_notificationId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BaseActivity.this, Notification.class);
@@ -87,7 +89,7 @@ public class BaseActivity extends AppCompatActivity
             }
         });
 
-        timeTableCV.setOnClickListener(new View.OnClickListener() {
+        linear_time_table.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BaseActivity.this, Time_Table_Activity.class);
@@ -95,7 +97,7 @@ public class BaseActivity extends AppCompatActivity
             }
         });
 
-        GPA_CalculatorCV.setOnClickListener(new View.OnClickListener() {
+        linear_gpa_cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BaseActivity.this, GPA_Calculator.class);
@@ -104,7 +106,7 @@ public class BaseActivity extends AppCompatActivity
         });
     }
 
-    //method for drawer layout
+    //    method for drawer layout
     private void drawerLayout() {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -117,18 +119,18 @@ public class BaseActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    //method for image view flipper
-    public void image_viewFlipper(int image){
+    //    method for image view flipper
+    public void image_viewFlipper(int image) {
         ImageView imageView = new ImageView(BaseActivity.this);
         imageView.setBackgroundResource(image);
 
         img_viewFlipper.addView(imageView);
-        img_viewFlipper.setFlipInterval(1000);
+        img_viewFlipper.setFlipInterval(2000);
         img_viewFlipper.setAutoStart(true);
 
         //Animation for viewFlipper
-        img_viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
-        img_viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
+        img_viewFlipper.setInAnimation(this, android.R.anim.slide_in_left);
+        img_viewFlipper.setInAnimation(this, android.R.anim.slide_out_right);
 
     }
 
@@ -196,7 +198,7 @@ public class BaseActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contact_us) {
 
-        }else if (id == R.id.nav_our_website) {
+        } else if (id == R.id.nav_our_website) {
 
         } else if (id == R.id.nav_logout) {
 
@@ -205,6 +207,5 @@ public class BaseActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 }

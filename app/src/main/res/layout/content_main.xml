@@ -1,298 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".BaseActivity"
-    tools:showIn="@layout/app_bar_main">
+    android:background="#aed581"
+    android:orientation="vertical">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="404dp"
-        android:layout_height="267dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:id="@+id/firstRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
 
         <ViewFlipper
             android:id="@+id/img_viewFlipper"
             android:layout_width="404dp"
-            android:layout_height="248dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="248dp" />
 
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+    <LinearLayout
+        android:id="@+id/secondRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="14">
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/notification_img_id"
-            android:layout_width="89dp"
-            android:layout_height="84dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/notification_background"
-            android:contentDescription="@string/event"
-            android:src="@drawable/ic_notifications_24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/notification_text_id"
+        <LinearLayout
+            android:id="@+id/linear_notificationId"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="288dp"
-            android:layout_marginRight="288dp"
-            android:layout_marginBottom="112dp"
-            android:text="@string/notifications"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/calculator_text_id" />
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_height="150dp">
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/apply_img_id"
-            android:layout_width="86dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginLeft="112dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/apply_online"
-            android:contentDescription="@string/apply"
-            android:padding="10dp"
-            android:src="@drawable/apply"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/notification_img_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/notification_background"
+                android:contentDescription="@string/event"
+                android:src="@drawable/ic_notifications_24dp"
+                />
 
-        <TextView
-            android:id="@+id/apply_online_id"
+            <TextView
+                android:id="@+id/notification_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white_color"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_apply_online"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/apply"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/apply_img_id"
-            app:layout_constraintTop_toTopOf="@+id/apply_img_id"
-            app:layout_constraintVertical_bias="0.373" />
+            android:orientation="vertical"
+            android:layout_height="150dp">
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/time_img_id"
-            android:layout_width="81dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/time_table_background"
-            android:contentDescription="@string/time_table"
-            android:padding="10dp"
-            android:src="@drawable/timetable"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/calculator_img_id"
-            app:layout_constraintHorizontal_bias="0.99"
-            app:layout_constraintStart_toStartOf="@+id/notification_img_id"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/apply_img_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@+id/apply_online"
+                android:background="@drawable/apply_online"
+                android:contentDescription="@string/apply"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/apply"
+                />
 
-        <TextView
-            android:id="@+id/time_text_id"
+            <TextView
+                android:id="@+id/apply_online_id"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/apply"
+                android:textSize="16sp"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_time_table"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/time_img_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/time_table_background"
+                android:contentDescription="@string/time_table"
+                android:src="@drawable/timetable" />
+
+            <TextView
+                android:id="@+id/time_text_id"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time_table"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white_color"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_gpa_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/calculator_img_id"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/calculator_background"
+                android:contentDescription="@string/cgp"
+                android:padding="10dp"
+                android:src="@drawable/icalculator"
+                />
+
+            <TextView
+                android:id="@+id/calculator_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cgp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white_color"
+                android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_courses"
+            android:layout_width="85dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="105dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/courses_img_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/faculty_background"
+                android:contentDescription="@string/cgp"
+                android:src="@drawable/courses" />
+
+            <TextView
+                android:id="@+id/courses_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/courses"
+                android:textSize="14sp"
+                android:textColor="@color/white_color"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_view_faculty"
             android:layout_width="93dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/time_table"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/time_img_id"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/time_img_id"
-            app:layout_constraintTop_toBottomOf="@+id/time_img_id"
-            app:layout_constraintVertical_bias="0.027" />
+            android:layout_height="150dp"
+            android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/calculator_img_id"
-            android:layout_width="82dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="312dp"
-            android:layout_marginLeft="312dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/calculator_background"
-            android:contentDescription="@string/cgp"
-            android:padding="10dp"
-            android:src="@drawable/icalculator"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/view_faculty_img_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/faculty_background"
+                android:contentDescription="@string/cgp"
+                android:padding="10dp"
+                android:src="@drawable/faculty" />
 
-        <TextView
-            android:id="@+id/calculator_text_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/cgp"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/calculator_img_id"
-            app:layout_constraintHorizontal_bias="0.545"
-            app:layout_constraintStart_toStartOf="@+id/calculator_img_id"
-            app:layout_constraintTop_toBottomOf="@+id/calculator_img_id"
-            app:layout_constraintVertical_bias="0.013" />
+            <TextView
+                android:id="@+id/view_faculty_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/faculty"
+                android:textColor="@color/white_color"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/gpa_calculator_img_id"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginLeft="68dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/cgp_background"
-            android:contentDescription="@string/cgp"
-            android:padding="10dp"
-            android:src="@drawable/gp_calculator"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/gpa_calculator_text_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="232dp"
-            android:text="@string/gp"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/gpa_calculator_img_id"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/gpa_calculator_img_id"
-            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/view_faculty_img_id"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="144dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginRight="160dp"
-            android:background="@drawable/faculty_background"
-            android:contentDescription="@string/cgp"
-            android:padding="10dp"
-            android:src="@drawable/faculty"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/view_faculty_text_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="232dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginRight="160dp"
-            android:text="@string/faculty"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/courses_img_id"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="144dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/faculty_background"
-            android:contentDescription="@string/cgp"
-            android:padding="10dp"
-            android:src="@drawable/courses"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/courses_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="232dp"
-            android:text="@string/courses"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/courses_img_id"
-            app:layout_constraintHorizontal_bias="0.37"
-            app:layout_constraintStart_toStartOf="@+id/courses_img_id"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </android.support.constraint.ConstraintLayout>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

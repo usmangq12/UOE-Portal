@@ -13,19 +13,19 @@ public class AddCourses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main);
+        setContentView(R.layout.activity_add_courses);
 
         viewAll();
     }
 
     private void viewAll() {
-//        tvAddCourses = findViewById(R.id.tvAddCourses);
-//        etCourseTitle = findViewById(R.id.etCourseTitle);
-//        etFirstCourse = findViewById(R.id.etFirstCourse);
-//        etSecondCourse = findViewById(R.id.etSecondCourse);
-//        etThirdCourse = findViewById(R.id.etThirdCourse);
-//        etFourthCourse = findViewById(R.id.etFourthCourse);
-//        etFifthCourse = findViewById(R.id.etFifthCourse);
-//        etSixthCourse = findViewById(R.id.etSixthCourse);
+        tvAddCourses = findViewById(R.id.tvAddCourses);
+        etCourseTitle = findViewById(R.id.etCourseTitle);
+        etFirstCourse = findViewById(R.id.etFirstCourse);
+        etSecondCourse = findViewById(R.id.etSecondCourse);
+        etThirdCourse = findViewById(R.id.etThirdCourse);
+        etFourthCourse = findViewById(R.id.etFourthCourse);
+        etFifthCourse = findViewById(R.id.etFifthCourse);
+        etSixthCourse = findViewById(R.id.etSixthCourse);
     }
 }

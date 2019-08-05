@@ -14,6 +14,7 @@
     <color name="deep_purple">#E1BEE7</color>
     <color name="deep_orange">#F1A28C</color>
     <color name="faculty_color">#C8E6C9</color>
-
+    <color name="white_color">#ffffff</color>
+    <color name="parent_app_background">#aed581</color>
 
 </resources>
