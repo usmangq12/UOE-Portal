@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="2.5dp"
+    android:padding="8dp"
+    android:background="@color/parent_app_background"
+    android:screenOrientation="locked">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_notifications_24dp" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:scrollHorizontally="true"
+        android:text="@string/notifications"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="3dp"
+        android:layout_weight="2"
+        android:text="@string/time"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+</LinearLayout>
